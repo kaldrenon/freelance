@@ -3,7 +3,7 @@ class CreateContracts < ActiveRecord::Migration
     create_table :contracts do |t|
       t.string :name
       t.integer :freelancer
-      t.int :organization
+      t.integer :organization
       t.datetime :event
       t.text :details
 
