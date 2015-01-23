@@ -1,0 +1,27 @@
+h1 Listing freelancers
+
+table
+  thead
+    tr
+      th Name
+      th Email
+      th Phone
+      th Bio
+      th
+      th
+      th
+
+  tbody
+    - @freelancers.each do |freelancer|
+      tr
+        td = freelancer.name
+        td = freelancer.email
+        td = freelancer.phone
+        td = freelancer.bio
+        td = link_to 'Show', freelancer
+        td = link_to 'Edit', edit_freelancer_path(freelancer)
+        td = link_to 'Destroy', freelancer, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Freelancer', new_freelancer_path

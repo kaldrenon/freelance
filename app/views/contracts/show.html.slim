@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @contract.name
+p
+  strong Freelancer:
+  = @contract.freelancer
+p
+  strong Organization:
+  = @contract.organization
+p
+  strong Event:
+  = @contract.event
+p
+  strong Details:
+  = @contract.details
+
+= link_to 'Edit', edit_contract_path(@contract)
+'|
+= link_to 'Back', contracts_path

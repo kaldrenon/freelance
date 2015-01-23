@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @freelancer.name
+p
+  strong Email:
+  = @freelancer.email
+p
+  strong Phone:
+  = @freelancer.phone
+p
+  strong Bio:
+  = @freelancer.bio
+
+= link_to 'Edit', edit_freelancer_path(@freelancer)
+'|
+= link_to 'Back', freelancers_path
