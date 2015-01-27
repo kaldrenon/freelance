@@ -3,6 +3,10 @@ h1 Listing organizations
 table
   thead
     tr
+      th Name
+      th Email
+      th Phone
+      th Description
       th
       th
       th
@@ -10,9 +14,13 @@ table
   tbody
     - @organizations.each do |organization|
       tr
-        td = link_to 'Show', organization
-        td = link_to 'Edit', edit_organization_path(organization)
-        td = link_to 'Destroy', organization, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td= organization.name
+        td= organization.email
+        td= organization.phone
+        td= organization.description
+        td= link_to 'Show', organization
+        td= link_to 'Edit', edit_organization_path(organization)
+        td= link_to 'Destroy', organization, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
 

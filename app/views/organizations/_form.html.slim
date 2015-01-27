@@ -2,6 +2,11 @@
   = f.error_notification
 
   .form-inputs
-
+    / name email phone desc
+    = f.input :name, label: 'Name', class: 'default-input'
+    = f.input :phone, label: 'Phone', class: 'default-input'
+    = f.input :email, label: 'Email', class: 'default-input'
+    label[for='organization_description'] Description
+    = f.text_area :description, label: 'Description', class: 'form-control default-textarea'
   .form-actions
     = f.button :submit
